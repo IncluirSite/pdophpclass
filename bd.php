@@ -92,7 +92,7 @@ class bd {
                 echo "<br /><b>SQL: </b>" . $sql . "<br />";
                 ;
                 echo "<br /><b>Parameters: </b>";
-                print_r($parametros) . "<br />";
+                print_r($params) . "<br />";
                 ;
             }
             die();
@@ -117,7 +117,7 @@ class bd {
                 echo "<br /><b>SQL: </b>" . $sql . "<br />";
                
                 echo "<br /><b>Parameters: </b>";
-                print_r($parametros) . "<br />";
+                print_r($params) . "<br />";
                 ;
             }
             die();
@@ -142,7 +142,7 @@ class bd {
                 echo "<br /><b>SQL: </b>" . $sql . "<br />";
                 ;
                 echo "<br /><b>Parameters: </b>";
-                print_r($parametros) . "<br />";
+                print_r($params) . "<br />";
                 ;
             }
             die();
