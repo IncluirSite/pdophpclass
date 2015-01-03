@@ -2,7 +2,7 @@
 
 class bd {
 
-    private static $conexao;
+    private static $connection;
     private $debug;
     private $server;
     private $user;
@@ -22,13 +22,13 @@ class bd {
     */
     public function getConnection() {
         try {
-            if (self::$conexao == null) {
-                self::$conexao = new PDO("mysql:host={$this->server};dbname={$this->database};charset=utf8", $this->user, $this->password);
-                self::$conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                self::$conexao->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-                self::$conexao->setAttribute(PDO::ATTR_PERSISTENT, true);
+            if (self::$connection == null) {
+                self::$connection = new PDO("mysql:host={$this->server};dbname={$this->database};charset=utf8", $this->user, $this->password);
+                self::$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                self::$connection->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+                self::$connection->setAttribute(PDO::ATTR_PERSISTENT, true);
             }
-            return self::$conexao;
+            return self::$connection;
         } catch (PDOException $ex) {
             if ($this->debug) {
                 echo "<b>Error on getConnection(): </b>" . $ex->getMessage() . "<br/>";
@@ -42,7 +42,7 @@ class bd {
     * @return void
     */
     public function Disconnect() {
-        $this->conexao = null;
+        $this->connection = null;
     }
 
     /**
