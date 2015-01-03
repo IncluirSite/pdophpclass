@@ -127,10 +127,10 @@ class bd {
 
 
     /**
-    * returns rows affecteds count
+    * returns if the query was successful
     * @param string $sql the sql string
     * @param array $params the array of parameters (array(":col1" => "val1",":col2" => "val2"))
-    * @return integer
+    * @return boolean
     */   
     public function ExecuteNonQuery($sql, $params = null) {
         try {
