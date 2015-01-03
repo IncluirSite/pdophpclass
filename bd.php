@@ -23,7 +23,7 @@ class bd {
             $this->database = "bdname";
     }
     /**
-    * Create a database connection or return the connection already open
+    * Create a database connection or return the connection already open using Singletion Design Patern
     * @return PDOConnection|null
     */
     public function getConnection() {
