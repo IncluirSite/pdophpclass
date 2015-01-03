@@ -1,5 +1,11 @@
 <?php
-
+/**
+ * PDO PHP Persistence Class
+ * https://github.com/victortassinari/pdophpclass
+ *
+ *
+ * @author Victor Tassinari - victortassinarix@gmail.com
+ */
 class bd {
 
     private static $connection;
